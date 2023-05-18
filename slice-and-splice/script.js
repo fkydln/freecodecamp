@@ -2,7 +2,12 @@
 // https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-algorithm-scripting/slice-and-splice
 
 function frankenSplice(arr1, arr2, n) {
-  return arr2;
+  let resultingArr = [];
+  resultingArr = arr2;
+  // injection
+  resultingArr.splice(n, 0, ...arr1);
+
+  return resultingArr;
 }
 
 frankenSplice([1, 2, 3], [4, 5, 6], 1);
