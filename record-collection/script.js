@@ -24,7 +24,24 @@ const recordCollection = {
 
 // Only change code below this line
 function updateRecords(records, id, prop, value) {
+  console.log(records[id][prop]);
+
+  if (value == "") {
+    delete records[id][prop];
+  }
+  if (prop !== "tracks" && value !== "") {
+    console.log("The value to be assigned at the prop: " + value);
+    records[id][prop] = value;
+    console.log(records[id][prop]);
+  }
+  if (prop == "tracks" && value !== "") {
+    console.log(records[id][prop]);
+
+    records.id.prop = "value";
+  }
+
   return records;
 }
 
 updateRecords(recordCollection, 5439, "artist", "ABBA");
+updateRecords(recordCollection, 5439, "tracks", "Take a Chance on Me");
