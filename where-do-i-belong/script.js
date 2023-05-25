@@ -7,7 +7,15 @@
 // https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-algorithm-scripting/where-do-i-belong
 
 function getIndexToIns(arr, num) {
-  return num;
+  // add num to the array.
+  arr.push(num);
+  // Sort altogether
+  arr.sort((a, b) => a - b);
+  console.log("sorted " + arr);
+
+  // find the index of the num
+  console.log(arr.indexOf(num));
+  return arr.indexOf(num);
 }
 
 getIndexToIns([40, 60], 50);
